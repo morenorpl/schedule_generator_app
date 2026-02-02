@@ -3,7 +3,8 @@ import '../models/task_model.dart';
 
 class GeminiService {
   // TODO: Replace with your actual API key or use --dart-define
-  static const String _apiKey = 'AIzaSyA0keNjbAYdgBop7Zpm_sCf_m6Ih3sz1xg';
+
+  static const String _apiKey = String.fromEnvironment('GEMINI_API_KEY');
 
   late final GenerativeModel _model;
 
