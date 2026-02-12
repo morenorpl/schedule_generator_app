@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:google_generative_ai/google_generative_ai.dart';
 import '../models/task_model.dart';
 
@@ -9,6 +11,7 @@ class GeminiService {
   late final GenerativeModel _model;
 
   GeminiService() {
+    log('API KEY : $_apiKey');
     _model = GenerativeModel(model: 'gemini-3-flash-preview', apiKey: _apiKey);
   }
 
